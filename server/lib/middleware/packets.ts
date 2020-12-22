@@ -1,4 +1,5 @@
 import { URL } from "url"
+import { Payload } from "."
 
 type HttpVerbs = 'GET' | 'HEAD' | 'POST' | 'PUT' | 'DELETE' | 'CONNECT' | 'OPTIONS' | 'TRACE' | 'PATCH'
 
@@ -23,5 +24,9 @@ export default class Packets {
 
   requests(): Array<Req> {
     return [...this.sessions.values()]
+  }
+
+  onMessage(payload: Payload): Boolean {
+    return true
   }
 }
