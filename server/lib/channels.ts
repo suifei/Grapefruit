@@ -4,7 +4,7 @@ import http from 'http'
 
 import io from 'socket.io'
 import REPL from './repl'
-import Middleware from './middleware'
+import { Middleware } from './middleware/index'
 import Packets from './middleware/packets'
 import * as transfer from './transfer'
 import { wrap, tryGetDevice } from './device'
